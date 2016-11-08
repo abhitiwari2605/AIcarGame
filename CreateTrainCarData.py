@@ -12,8 +12,6 @@ red = (255,0,0)
 block_color=(53,112,85)
 carData=[]
 
-pickle_in = open('trainedGame.pickle','rb')
-clf = pickle.load(pickle_in)
 
 gameDisplay = pygame.display.set_mode((display_width,display_height))
 pygame.display.set_caption('A bit racy')

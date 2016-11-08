@@ -19,8 +19,8 @@ X_train,X_test,y_train,y_test = cross_validation.train_test_split(trainx,trainy,
 clf = LogisticRegression(n_jobs = -1)
 clf.fit(X_train,y_train)
 accuracy = clf.score(X_test,y_test)
-
-print(y_test)
+print(int(clf.predict(X_test[1])))
+#print(y_test)
 
 with open('trainedGame.pickle','wb') as f:
     pickle.dump(clf, f)
