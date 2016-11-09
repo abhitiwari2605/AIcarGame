@@ -8,7 +8,7 @@ trainx=[]
 trainy=[]
 
 for feature in gameData:
-    trainx.append(feature[0:4])
+    trainx.append(feature[0:3])
 
 
 for feature in gameData:
@@ -19,8 +19,8 @@ X_train,X_test,y_train,y_test = cross_validation.train_test_split(trainx,trainy,
 clf = LogisticRegression(n_jobs = -1)
 clf.fit(X_train,y_train)
 accuracy = clf.score(X_test,y_test)
-print(int(clf.predict(X_test[1])))
-#print(y_test)
+for x in X_test:
+    print(x,clf.predict(x))
 
 with open('trainedGame.pickle','wb') as f:
     pickle.dump(clf, f)

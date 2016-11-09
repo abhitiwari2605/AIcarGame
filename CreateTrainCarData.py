@@ -52,11 +52,13 @@ def crash():
 
 
 def grabData(x,thingx,thingy,thingSpeed,xChange):
+    lmargin = x;
+    rmargin = display_width-x;
+    separation = x-thingx
     temp=[]
-    temp.append(thingx)
-    temp.append(thingy)
-    
-    temp.append(thingSpeed)
+    temp.append(lmargin)
+    temp.append(rmargin)
+    temp.append(separation)
     temp.append(xChange)
     carData.append(temp)
     

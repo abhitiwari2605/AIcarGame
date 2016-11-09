@@ -107,7 +107,7 @@ def gameLoop():
             
         
         x_change=clf.predict(inputdata)
-        print(inputdata,int(x_change))
+        print(inputdata,int(x_change[0]))
         x+=int(x_change)
                 
 
